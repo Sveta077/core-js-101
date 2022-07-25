@@ -143,10 +143,10 @@ function retry(func, attempts) {
 function logger(func, logFunc) {
   return (...args) => {
     const { name } = func;
-    const cosLogger = `${name}(${JSON.stringify(args).slice(1, -1)})`;
-    logFunc(`${cosLogger} starts`);
+    const cos = `${name}(${JSON.stringify(args).slice(1, -1)})`;
+    logFunc(`${cos} starts`);
     const result = func(...args);
-    logFunc(`${cosLogger} ends`);
+    logFunc(`${cos} ends`);
     return result;
   };
 }
